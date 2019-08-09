@@ -1,0 +1,24 @@
+{
+  "name": "azure-servicebus-socketio",
+  "version": "1.0.0",
+  "description": "Socket IO server for real-time messaging between Azure Service Bus and a frontend UI",
+  "private": true,
+  "author": "Sean Grasso <sean.grasso@kalibrate.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV='development' node server.js --exec nodemon"
+  },
+  "dependencies": {
+    "@azure/service-bus": "^1.0.3",
+    "azure-sb": "^0.11.1",
+    "node-uuid": "^1.4.8",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "10.x.x"
+  }
+}
