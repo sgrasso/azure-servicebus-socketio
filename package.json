@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
+    "test": "jest",
     "dev": "NODE_ENV='development' node server.js --exec nodemon"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
+    "jest": "^24.8.0",
     "nodemon": "^1.19.1"
   },
   "engines": {

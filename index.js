@@ -43,7 +43,7 @@ io.on('connection', socket => {
 });
 
 // Message Handler success method
-const messageSuccess = message => {
+const messageSuccess = async message => {
     const socketIds = clients.getClients(message.body.user);
 
     for (let i = 0; i < socketIds.length; i++) {
