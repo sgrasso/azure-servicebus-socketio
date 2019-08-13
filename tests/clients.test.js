@@ -42,7 +42,7 @@ describe('Add User to Clients', () => {
 
         const result3 = await clients.addClient({id: 999}, 'user2');
 
-        expect(result2).toMatchObject({
+        expect(result3).toMatchObject({
             user2: expect.arrayContaining([123, 999]),
             user3: expect.arrayContaining([456])
         });
