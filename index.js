@@ -44,7 +44,7 @@ io.on('connection', socket => {
 
 // Message Handler success method
 const messageSuccess = async message => {
-    const socketIds = clients.getClients(message.body.user);
+    const socketIds = await clients.getClients(message.body.user);
 
     for (let i = 0; i < socketIds.length; i++) {
         io.to(socketIds[i]).emit(message.label, message.body);
