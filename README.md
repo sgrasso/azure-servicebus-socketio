@@ -4,13 +4,15 @@ A SocketIO server for real-time messaging between an Azure Service Bus topic and
 
 ## Overview
 
-A connected user will receive real-time notifications through a Azure Service Bus Topic subscription.  This is possible by using a small Node.js socket.io server interacting with an Azure Service Bus using the `@azure/service-bus` and `azure-sb` packages.
+A connected user will receive real-time notifications through a Azure Service Bus Topic subscription.  This is possible by using a small Node.js [socket.io](https://socket.io) server interacting with an Azure Service Bus using the [@azure/service-bus](https://www.npmjs.com/package/@azure/service-bus) and [azure-sb](https://www.npmjs.com/package/azure-sb) packages.
 
 The following ENV variables are required.
 
-`AZURE_SERVICEBUS_CONNECTION_STRING`
-`AZURE_SERVICEBUS_TOPIC_NAME`
-`HOSTNAME`
+> `AZURE_SERVICEBUS_CONNECTION_STRING`
+>
+> `AZURE_SERVICEBUS_TOPIC_NAME`
+>
+> `HOSTNAME`
 
 Each user will create a socket connection with process
 
@@ -24,7 +26,7 @@ Socket Server runs on the defined `process.env.PORT` value or by default `3001` 
 
 The following options are pass when creating a connection with the Service Bus Topic
 
-``` json
+``` js
 {
     DefaultMessageTimeToLive: 'PT30S',
     LockDuration: 'PT30S',
@@ -39,7 +41,7 @@ The AutoDeleteOnIdle guarentees that a subscription connection will not live for
 
 After appling the configured rules to the subscription a messsage handler will be created.  The following options are provided
 
-``` json
+``` js
 {
     receiveMode: 'receiveAndDelete',
     handler: {
@@ -54,7 +56,7 @@ Once a message is picked up from a subscription it will immediately be deleted s
 
 Rules can be added to the imported array.  All rules on a subscription will be removed prior to looping and apply each of the configured rules passed. If you wish to add more rules refer to the documentation for ASB subscritions rules for the format.
 
-``` json
+``` js
 [
     {
         name: 'example-rule',
