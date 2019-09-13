@@ -75,7 +75,9 @@ When you send a message to the Service Bus Topic be sure to include a user that 
 
 ``` js
 connnectUserSocket =  async user => {
-    const socket = (process.env.NODE_ENV === 'production') ? io({ transports: ['websocket'] }) : io(`http://localhost:3001`, { transports: ['websocket'] });
+    const socket = (process.env.NODE_ENV === 'production') ? 
+        io({ transports: ['websocket'] }) : 
+        io(`http://localhost:3001`, { transports: ['websocket'] });
 
     socket.on('connected', m => {
         socket.emit('add-user', user.preferred_username);
