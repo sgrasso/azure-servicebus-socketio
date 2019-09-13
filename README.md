@@ -52,7 +52,7 @@ After appling the configured rules to the subscription a messsage handler will b
 
 Once a message is picked up from a subscription it will immediately be deleted since each subscription is unique to its process/hostname. We set max concurrent connections as a best practice to 10.
 
-Azure Service Bus has integrations [.NET, Java, Node.js, Python, PHP, Ruby](https://docs.microsoft.com/en-us/azure/service-bus-messaging/) languages for sending message queue/topic messages.
+Azure Service Bus has integrations with [.NET, Java, Node.js, Python, PHP, Ruby](https://docs.microsoft.com/en-us/azure/service-bus-messaging/) languages for sending message queue/topic messages.
 
 ## Subscription Rules
 
