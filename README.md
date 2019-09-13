@@ -30,7 +30,7 @@ The following options are pass when creating a connection with the Service Bus T
 {
     DefaultMessageTimeToLive: 'PT30S',
     LockDuration: 'PT30S',
-    AutoDeleteOnIdle: (process.env.NODE_ENV === 'production') ? 'PT24H' : 'PT5M' //24 hrs for PROD otherwise 5 mins
+    AutoDeleteOnIdle: (process.env.NODE_ENV === 'production') ? 'PT24H' : 'PT5M'
 }
 ```
 
